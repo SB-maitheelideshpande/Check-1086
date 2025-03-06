@@ -1,6 +1,6 @@
 openapi: 3.1.0
 x-stoplight:
-  id: n0qmwflmbzovq
+  id: 6hm2480zqxwt1
 info:
   title: test-3.1
   version: '1.0'
@@ -41,7 +41,7 @@ paths:
       operationId: get-users-userId
       description: Retrieve the information of the user with the matching user ID.
       x-stoplight:
-        id: n0qmwflmbzovq
+        id: r6jugroikxwyy
     patch:
       summary: Update User Information
       operationId: patch-users-userId
@@ -95,7 +95,7 @@ paths:
                   dateOfBirth: '1985-10-02'
         description: Patch user properties to update.
       x-stoplight:
-        id: 20jmwmmlebgwb
+        id: lisstzyg22gbb
   /user:
     post:
       summary: Create New User
@@ -151,11 +151,13 @@ paths:
         description: Post the necessary fields for the API to create a new user.
       description: Create a new user.
       x-stoplight:
-        id: 20jmwmmlebgwb
+        id: da0jpb79wkv65
 components:
   schemas:
     User:
       title: User
+      x-stoplight:
+        id: kqq6tz9e6khkf
       type: object
       description: ''
       examples:
@@ -175,7 +177,7 @@ components:
         firstName:
           type: string
           x-stoplight:
-            id: x51cvj2u54wdr
+            id: ehwladd37k50o
         lastName:
           type: string
           x-stoplight:
@@ -184,13 +186,13 @@ components:
           type: string
           format: email
           x-stoplight:
-            id: hcz7yq7x0tys3
+            id: gob6u7wwu2fr2
         dateOfBirth:
           type: string
           format: date
           example: '1997-10-31'
           x-stoplight:
-            id: hcz7yq7x0tys3
+            id: tawklj645oifb
         emailVerified:
           type: boolean
           description: Set to true if the user's email has been verified.
@@ -201,12 +203,10 @@ components:
           format: date
           description: The date that the user was created.
           x-stoplight:
-            id: 8ehul4e00motl
+            id: un4ywnxo5wv6x
       required:
         - id
         - firstName
         - lastName
         - email
         - emailVerified
-      x-stoplight:
-        id: nlp01pdvtxgh8
