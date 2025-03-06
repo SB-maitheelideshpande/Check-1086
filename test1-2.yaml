@@ -41,7 +41,7 @@ paths:
       operationId: get-users-userId
       description: Retrieve the information of the user with the matching user ID.
       x-stoplight:
-        id: n0qmwflmbzovq
+        id: mpbxeg8jz4k95
     patch:
       summary: Update User Information
       operationId: patch-users-userId
@@ -95,7 +95,7 @@ paths:
                   dateOfBirth: '1985-10-02'
         description: Patch user properties to update.
       x-stoplight:
-        id: n0qmwflmbzovq
+        id: k1bbv14olglsm
   /user:
     post:
       summary: Create New User
@@ -156,6 +156,8 @@ components:
   schemas:
     User:
       title: User
+      x-stoplight:
+        id: nlp01pdvtxgh8
       type: object
       description: ''
       examples:
@@ -171,26 +173,26 @@ components:
           type: integer
           description: Unique identifier for the given user.
           x-stoplight:
-            id: 1cxgqx98r0lck
+            id: 625u0mvypmhh3
         firstName:
           type: string
           x-stoplight:
-            id: 1cxgqx98r0lck
+            id: 6nonuwj8tb1t1
         lastName:
           type: string
           x-stoplight:
-            id: 1cxgqx98r0lck
+            id: n0q6lviy8rzpg
         email:
           type: string
           format: email
           x-stoplight:
-            id: q8im0me9su2qj
+            id: cpqitzf7xedxj
         dateOfBirth:
           type: string
           format: date
           example: '1997-10-31'
           x-stoplight:
-            id: q8im0me9su2qj
+            id: zntnvjrayayc3
         emailVerified:
           type: boolean
           description: Set to true if the user's email has been verified.
@@ -208,5 +210,3 @@ components:
         - lastName
         - email
         - emailVerified
-      x-stoplight:
-        id: nlp01pdvtxgh8
