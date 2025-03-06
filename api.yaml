@@ -4,6 +4,7 @@ x-stoplight:
 info:
   title: test2-3.0
   version: '1.0'
+  description: a
 servers:
   - url: 'http://localhost:3000'
 paths:
