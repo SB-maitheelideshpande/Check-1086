@@ -9,93 +9,10 @@ servers:
   - url: 'http://localhost:3000'
 paths:
   '/users/{userId}':
-    parameters:
-      - schema:
-          type: integer
-        name: userId
-        in: path
-        required: true
-        description: Id of an existing user.
-    get:
-      summary: Get User Info by User ID
-      tags: []
-      responses:
-        '200':
-          description: User Found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/User'
-              examples:
-                Get User Alice Smith:
-                  value:
-                    id: 142
-                    firstName: Alice
-                    lastName: Smith
-                    email: alice.smith@gmail.com
-                    dateOfBirth: '1997-10-31'
-                    emailVerified: true
-                    signUpDate: '2019-08-24'
-        '404':
-          description: User Not Found
-      operationId: get-users-userId
-      description: Retrieve the information of the user with the matching user ID.
-      x-stoplight:
-        id: n0qmwflmbzovq
+    id: o4fwb1gteg438
     patch:
-      summary: Update User Information
-      operationId: patch-users-userId
-      responses:
-        '200':
-          description: User Updated
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/User'
-              examples:
-                Updated User Rebecca Baker:
-                  value:
-                    id: 13
-                    firstName: Rebecca
-                    lastName: Baker
-                    email: rebecca@gmail.com
-                    dateOfBirth: '1985-10-02'
-                    emailVerified: false
-                    createDate: '2019-08-24'
-        '404':
-          description: User Not Found
-        '409':
-          description: Email Already Taken
-      description: Update the information of an existing user.
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                firstName:
-                  type: string
-                lastName:
-                  type: string
-                email:
-                  type: string
-                  description: 'If a new email is given, the user''s email verified property will be set to false.'
-                dateOfBirth:
-                  type: string
-            examples:
-              Update First Name:
-                value:
-                  firstName: Rebecca
-              Update Email:
-                value:
-                  email: rebecca@gmail.com
-              Update Last Name & Date of Birth:
-                value:
-                  lastName: Baker
-                  dateOfBirth: '1985-10-02'
-        description: Patch user properties to update.
       x-stoplight:
-        id: n0qmwflmbzovq
+        id: m8mejxdarf47d
   /user:
     post:
       summary: Create New User
@@ -156,6 +73,8 @@ components:
   schemas:
     User:
       title: User
+      x-stoplight:
+        id: nlp01pdvtxgh8
       type: object
       description: ''
       examples:
@@ -171,26 +90,26 @@ components:
           type: integer
           description: Unique identifier for the given user.
           x-stoplight:
-            id: 1cxgqx98r0lck
+            id: khmppkpiri9bg
         firstName:
           type: string
           x-stoplight:
-            id: 1cxgqx98r0lck
+            id: h49ib47gi384a
         lastName:
           type: string
           x-stoplight:
-            id: 1cxgqx98r0lck
+            id: 75elsk3ztdli1
         email:
           type: string
           format: email
           x-stoplight:
-            id: q8im0me9su2qj
+            id: veb1ohiegcezx
         dateOfBirth:
           type: string
           format: date
           example: '1997-10-31'
           x-stoplight:
-            id: q8im0me9su2qj
+            id: joc9uvteuij5k
         emailVerified:
           type: boolean
           description: Set to true if the user's email has been verified.
@@ -208,5 +127,3 @@ components:
         - lastName
         - email
         - emailVerified
-      x-stoplight:
-        id: nlp01pdvtxgh8
