@@ -41,7 +41,7 @@ paths:
       operationId: get-users-userId
       description: Retrieve the information of the user with the matching user ID.
       x-stoplight:
-        id: wbzbxn2rqpwxc
+        id: bp609kelx8xh5
     patch:
       summary: Update User Information
       operationId: patch-users-userId
@@ -95,7 +95,7 @@ paths:
                   dateOfBirth: '1985-10-02'
         description: Patch user properties to update.
       x-stoplight:
-        id: lw1is38e23lw7
+        id: bp609kelx8xh5
   /user:
     post:
       summary: Create New User
@@ -171,11 +171,11 @@ components:
           type: integer
           description: Unique identifier for the given user.
           x-stoplight:
-            id: r5sk0bn38ckov
+            id: cl6l5exr1mr34
         firstName:
           type: string
           x-stoplight:
-            id: p9rbmz1kels4v
+            id: cl6l5exr1mr34
         lastName:
           type: string
           x-stoplight:
@@ -184,7 +184,7 @@ components:
           type: string
           format: email
           x-stoplight:
-            id: 9ffr7q0qek5j9
+            id: qyafzom30q94h
         dateOfBirth:
           type: string
           format: date
@@ -201,7 +201,7 @@ components:
           format: date
           description: The date that the user was created.
           x-stoplight:
-            id: 6ocr20mdekw9a
+            id: qyafzom30q94h
       required:
         - id
         - firstName
